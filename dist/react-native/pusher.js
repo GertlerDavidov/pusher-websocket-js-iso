@@ -261,7 +261,7 @@ module.exports =
 
 	var XHR = __webpack_require__(2);
 
-	module.exports = Util = {
+	var Util = {
 	  now: function() {
 	    if (Date.now) {
 	      return Date.now();
@@ -594,7 +594,7 @@ module.exports =
 	    }
 	  }
 	};
-
+module.exports = Util
 
 /***/ },
 /* 2 */
@@ -1365,7 +1365,7 @@ module.exports =
 /* 11 */
 /***/ function(module, exports) {
 
-	module.exports = {version: "0.2.0"};
+	module.exports = {version: "0.1.0"};
 
 /***/ },
 /* 12 */
@@ -1397,10 +1397,10 @@ module.exports =
 	  }
 	};
 
-	module.exports = getStreamingSocket = function(url) {
+	var getStreamingSocket = function(url) {
 	  return new HTTPSocket(hooks, url);
 	};
-
+module.exports = getStreamingSocket
 
 /***/ },
 /* 14 */
@@ -1665,9 +1665,11 @@ module.exports =
 	  }
 	};
 
-	module.exports = getXHR = function(method, url) {
+	var getXHR = function(method, url) {
 	  return new HTTPRequest(hooks, method, url);
 	};
+
+		module.exports = getXHR
 
 
 /***/ },
@@ -1801,10 +1803,10 @@ module.exports =
 	  }
 	};
 
-	module.exports = getXDR = function(method, url) {
+	var getXDR = function(method, url) {
 	  return new HTTPRequest(hooks, method, url);
 	};
-
+module.exports = getXDR
 
 /***/ },
 /* 19 */
@@ -1831,10 +1833,10 @@ module.exports =
 	  }
 	};
 
-	module.exports = getPollingSocket = function(url) {
+	var getPollingSocket = function(url) {
 	  return new HTTPSocket(hooks, url);
 	};
-
+module.exports = getPollingSocket
 
 /***/ },
 /* 20 */
@@ -2539,7 +2541,7 @@ module.exports =
 	var IfStrategy = __webpack_require__(42);
 	var FirstConnectedStrategy = __webpack_require__(43);
 
-	module.exports = StrategyBuilder = {
+	vsr StrategyBuilder = {
 	  /** Transforms a JSON scheme to a strategy tree.
 	   *
 	   * @param {Array} scheme JSON strategy scheme
@@ -2551,7 +2553,7 @@ module.exports =
 	    return evaluate(scheme, context)[1].strategy;
 	  }
 	};
-
+module.exports = StrategyBuilder
 	var transports = {
 	  ws: Transports.WSTransport,
 	  xhr_streaming: Transports.XHRStreamingTransport,
