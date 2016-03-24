@@ -2541,7 +2541,7 @@ module.exports = getPollingSocket
 	var IfStrategy = __webpack_require__(42);
 	var FirstConnectedStrategy = __webpack_require__(43);
 
-	vsr StrategyBuilder = {
+	var StrategyBuilder = {
 	  /** Transforms a JSON scheme to a strategy tree.
 	   *
 	   * @param {Array} scheme JSON strategy scheme
